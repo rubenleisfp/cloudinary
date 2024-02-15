@@ -1,4 +1,4 @@
-package com.castelafp.cloudinary;
+package com.castelaofp.cloudinary;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

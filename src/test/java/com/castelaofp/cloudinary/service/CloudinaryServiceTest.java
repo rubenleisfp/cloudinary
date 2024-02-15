@@ -1,4 +1,6 @@
-package com.castelafp.cloudinary.service;
+package com.castelaofp.cloudinary.service;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,9 +12,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
-import com.castelafp.cloudinary.utils.ImageUtils;
+import com.castelaofp.cloudinary.utils.ImageUtils;
 import com.cloudinary.Cloudinary;
-import com.cloudinary.utils.ObjectUtils;
 
 @SpringBootTest
 public class CloudinaryServiceTest {
@@ -34,7 +35,7 @@ public class CloudinaryServiceTest {
 		String imageToBase64 = imageUtils.imageToBase64(imageFile);
 
 		// Llamada al método que se está probando
-		cloudinaryService.upload(imageToBase64);
-
+		String uploadUrl = cloudinaryService.upload(imageToBase64);
+		assertNotNull(uploadUrl);
 	}
 }

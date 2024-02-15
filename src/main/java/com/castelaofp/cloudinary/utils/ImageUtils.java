@@ -1,4 +1,4 @@
-package com.castelafp.cloudinary.utils;
+package com.castelaofp.cloudinary.utils;
 
 import java.io.File;
 import java.io.IOException;
