@@ -21,20 +21,10 @@ public class CloudinaryService {
 	private Cloudinary cloudinary;
 
 	public CloudinaryService() {
-		Dotenv dotenv = Dotenv.load();
-		cloudinary = new Cloudinary(dotenv.get("CLOUDINARY_URL"));
-		cloudinary.config.secure = true;
-		System.out.println(cloudinary.config.cloudName);
+		throw new UnsupportedOperationException("Configura aqui la instancia de cloudinary");
 	}
 
 	public String upload(String base64Data) throws IOException {
-		Map<String, String> options = new HashMap<String, String>();
-		options.put("folder", "indie3");
-		
-		Map cloudinaryParams = cloudinary.uploader().upload(BASE64_PREFIX + base64Data, options);
-		
-		LOG.debug("Parametros recibidos de cloudinary:" + cloudinaryParams.toString());
-		String url = (String) cloudinaryParams.get("url");
-		return url;
+		throw new UnsupportedOperationException("Configura el codigo aqui para subir la imagen a cloudinary");
 	}
 }
