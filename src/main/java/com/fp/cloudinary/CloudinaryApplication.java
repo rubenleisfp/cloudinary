@@ -1,14 +1,10 @@
-package com.castelaofp.cloudinary;
+package com.fp.cloudinary;
 
-import com.castelaofp.cloudinary.service.CloudinaryService;
+import com.fp.cloudinary.service.CloudinaryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
-
-import java.io.File;
 
 @SpringBootApplication
 public class CloudinaryApplication implements CommandLineRunner {

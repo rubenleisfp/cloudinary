@@ -1,11 +1,11 @@
-package com.castelaofp.cloudinary.service;
+package com.fp.cloudinary.service;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.castelaofp.cloudinary.utils.ImageUtils;
+import com.fp.cloudinary.utils.ImageUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
