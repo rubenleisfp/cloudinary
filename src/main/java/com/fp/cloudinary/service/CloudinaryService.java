@@ -2,6 +2,7 @@ package com.fp.cloudinary.service;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,30 +24,21 @@ public class CloudinaryService {
 	private Cloudinary cloudinary;
 
 	public CloudinaryService() {
-		Dotenv dotenv = Dotenv.load();
-		cloudinary = new Cloudinary(dotenv.get("CLOUDINARY_URL"));
-		cloudinary.config.secure = true;
-		System.out.println(cloudinary.config.cloudName);
+
+		//1. Carga el Dotenv y con el inicia la instancia de cloudinary para poder usar posteriormente
+		//en los metodos upload
+		throw new UnsupportedOperationException("A implementar por el alumno");
 	}
 
-	public String upload(File imageFile, String destinatioFolder) throws IOException{
-		ImageUtils imageUtils = new ImageUtils();
-		String imageToBase64 = imageUtils.imageToBase64(imageFile);
-		return this.upload(imageToBase64, destinatioFolder);
+	public String upload(File imageFile, String destinationFolder) throws IOException{
+		//1. Transformara el File a un String base 64.
+		//2. LLamara al metodo updload de esta clase para que suba el archivo
+		throw new UnsupportedOperationException("A implementar por el alumno");
 	}
 
 	public String upload(String base64Data, String destinationFolder) throws IOException {
-		Map<String, String> options = new HashMap<String, String>();
-		options.put("folder", destinationFolder);
-		//options.put("use_filename", "true");
-		options.put("display_name", "monkey.jpg");
-		options.put("filename", "monkey.jpg");
-
-		
-		Map cloudinaryParams = cloudinary.uploader().upload(BASE64_PREFIX + base64Data, options);
-		
-		LOG.debug("Parametros recibidos de cloudinary:" + cloudinaryParams.toString());
-		String url = (String) cloudinaryParams.get("url");
-		return url;
+		//1. Crea la options para indicar la carpeta en la cual guardara el fichero
+		//2. Llamara a cloudinary para subir el fichero en base 64
+		throw new UnsupportedOperationException("A implementar por el alumno");
 	}
 }
