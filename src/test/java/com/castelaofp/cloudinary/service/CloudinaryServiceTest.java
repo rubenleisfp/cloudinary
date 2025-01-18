@@ -21,21 +21,16 @@ public class CloudinaryServiceTest {
 	@Autowired
 	private CloudinaryService cloudinaryService;
 
-	@MockBean
-	private Cloudinary cloudinary;
 
 	@Test
 	public void testUpload() throws IOException {
 		// Datos de prueba
-		Resource resource = new ClassPathResource("images/thumbnail.jpg");
-
+		Resource resource = new ClassPathResource("images/monkey.jpg");
 		// Convertir el recurso a un archivo
 		File imageFile = resource.getFile();
-		ImageUtils imageUtils = new ImageUtils();
-		String imageToBase64 = imageUtils.imageToBase64(imageFile);
 
 		// Llamada al método que se está probando
-		String uploadUrl = cloudinaryService.upload(imageToBase64);
+		String uploadUrl = cloudinaryService.upload(imageFile,"samples/trash");
 		assertNotNull(uploadUrl);
 	}
 }

@@ -25,13 +25,13 @@
 		<!-- Servidor de objetos-->
 		<dependency>
 			<groupId>com.cloudinary</groupId>
-			<artifactId>cloudinary-http44</artifactId>
-			<version>1.36.0</version>
+			<artifactId>cloudinary-http5</artifactId>
+			<version>2.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.cloudinary</groupId>
 			<artifactId>cloudinary-taglib</artifactId>
-			<version>1.36.0</version>
+			<version>2.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>io.github.cdimascio</groupId>
